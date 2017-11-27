@@ -2,18 +2,16 @@ const express = require('express');
 
 const app = express();
 
-const security = require('../config/security');
-
 module.exports = app;
 
 require('./middlewares/helmet');
 require('./middlewares/cors');
 require('./middlewares/body-parser');
 require('./middlewares/log');
-require('./middlewares/not-found');
+require('./utils/multer');
 require('./routes/routes');
+require('./middlewares/not-found');
 
 module.exports = async ()=>{
-    await security.securityCheck();
     return app;
 }
