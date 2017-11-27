@@ -1,0 +1,1 @@
+cd .. && docker build -f Dockerfile -t "download-microservice" .

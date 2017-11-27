@@ -1,0 +1,29 @@
+{
+  "name": "download-microservice",
+  "version": "1.0.0",
+  "description": "Download Microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test:acceptance": "NODE_ENV=test mocha --opts test/acceptance/mocha.opts test/acceptance --recursive",
+    "test": "npm run test:acceptance"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuelframos/a-nodejs-microservices-architecture.git"
+  },
+  "author": "Emmanuel Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmanuelframos/a-nodejs-microservices-architecture/issues"
+  },
+  "homepage": "https://github.com/emmanuelframos/a-nodejs-microservices-architecture#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "helmet": "^3.9.0",
+    "morgan": "^1.9.0",
+    "winston": "^2.4.0"
+  }
+}
