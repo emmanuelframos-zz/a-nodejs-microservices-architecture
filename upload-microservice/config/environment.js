@@ -1,6 +1,6 @@
 const config = {
-    dev: {
-        upload_redis_host: process.env.UPLOAD_REDIS_HOST || 'dev-upload-redis',
+    development: {
+        upload_redis_host: process.env.UPLOAD_REDIS_HOST || 'development-upload-redis',
         upload_redis_port: process.env.UPLOAD_REDIS_PORT || 6379,
         port: process.env.PORT || 3000
     },
