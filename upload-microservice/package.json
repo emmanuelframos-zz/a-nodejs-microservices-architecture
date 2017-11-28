@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test:acceptance": "NODE_ENV=test mocha --opts test/acceptance/mocha.opts test/acceptance --recursive",
-    "test": "npm run test:acceptance"
+    "test:unit": "NODE_ENV=test mocha --opts test/mocha.opts test/unit --recursive",
+    "test:acceptance": "NODE_ENV=test mocha --opts test/mocha.opts test/acceptance --recursive",
+    "test": "npm run test:acceptance && npm run test:unit"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
-    "sinon": "^4.1.2"
+    "sinon": "^4.1.2",
+    "supertest": "^3.0.0"
   }
 }
