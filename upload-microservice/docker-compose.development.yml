@@ -5,7 +5,7 @@ services:
     hostname: development-upload-microservice
     build: .
     depends_on:
-      - redis
+      - development-redis
     environment:
       - NODE_ENV=development
     ports:
