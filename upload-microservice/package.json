@@ -7,7 +7,8 @@
     "start": "node index.js",
     "test:unit": "NODE_ENV=test mocha --opts test/mocha.opts test/unit --recursive",
     "test:acceptance": "NODE_ENV=test mocha --opts test/mocha.opts test/acceptance --recursive",
-    "test": "npm run test:acceptance && npm run test:unit"
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint '**/*.js' --fix"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,11 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
     "mocha": "^4.0.1",
     "sinon": "^4.1.2",
     "supertest": "^3.0.0"
