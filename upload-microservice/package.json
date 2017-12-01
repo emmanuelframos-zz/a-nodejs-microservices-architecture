@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test:unit": "NODE_ENV=test mocha --opts test/mocha.opts test/unit --recursive",
-    "test:acceptance": "NODE_ENV=test mocha --opts test/mocha.opts test/acceptance --recursive",
+    "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit --recursive",
+    "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration --recursive",
     "lint": "eslint '**/*.js'",
     "lint:fix": "eslint '**/*.js' --fix"
   },
@@ -25,6 +25,7 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "helmet": "^3.9.0",
+    "mongoose": "^4.13.5",
     "morgan": "^1.9.0",
     "multer": "^1.3.0",
     "redis": "^2.8.0",
@@ -39,7 +40,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
     "mocha": "^4.0.1",
-    "sinon": "^4.1.2",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "testdouble": "^3.2.6"
   }
 }
