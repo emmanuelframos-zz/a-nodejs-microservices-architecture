@@ -7,7 +7,7 @@ const config = require('./config/environment');
 setupApp()
   .then((app) => {
     app.listen(config.port, () => {
-      logger.info(`Upload Microservice running on port ${config.port}`);
+        logger.info(`Upload Microservice running on port ${config.port}`);
     });
   })
   .catch((error) => {

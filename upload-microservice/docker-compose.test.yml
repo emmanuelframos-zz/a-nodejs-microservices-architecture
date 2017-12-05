@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  development-upload-microservice:
+    container_name: test-upload-microservice
+    hostname: test-upload-microservice
+    build: .
+    depends_on:
+      - test-upload-redis
+    environment:
+      - NODE_ENV=test
+    ports:
+      - '3000:3000'
+  test-upload-redis:
+    image: redis:4.0
+    container_name: test-upload-redis
+    hostname: test-upload-redis
+    ports:
+      - '6379:6379'

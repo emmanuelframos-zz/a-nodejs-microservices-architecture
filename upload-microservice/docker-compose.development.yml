@@ -5,12 +5,12 @@ services:
     hostname: development-upload-microservice
     build: .
     depends_on:
-      - development-redis
+      - development-upload-redis
     environment:
       - NODE_ENV=development
     ports:
       - '3000:3000'
-  development-redis:
+  development-upload-redis:
     image: redis:4.0
     container_name: development-upload-redis
     hostname: development-upload-redis
