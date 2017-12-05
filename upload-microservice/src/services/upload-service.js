@@ -1,9 +1,7 @@
 const redisService = require('./redis-service');
 
-const upload = async ()=>{
-    return await redisService.set('key', 'value');
-}
+const upload = async uploadWrapper => redisService.set(uploadWrapper.uniqueId, uploadWrapper.data);
 
 module.exports = {
-    upload
-}
+  upload,
+};

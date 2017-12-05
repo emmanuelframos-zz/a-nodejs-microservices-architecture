@@ -1,9 +1,7 @@
 const redis = require('../../config/redis');
 
-const set = async(key, value)=>{
-    return await redis.client.set(key, value);
-}
+const set = async (fileName, fileData) => redis.client.set(fileName, fileData);
 
 module.exports = {
-    set
-}
+  set,
+};

@@ -12,6 +12,4 @@ require('./utils/multer');
 require('./routes/routes');
 require('./middlewares/not-found');
 
-module.exports = async ()=>{
-    return app;
-}
+module.exports = async () => app;

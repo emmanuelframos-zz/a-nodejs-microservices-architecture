@@ -1,3 +1,3 @@
 module.exports = {
-    MICROSERVICE_BASE_URL: '/upload-service/api/v1'
-}
+  MICROSERVICE_BASE_URL: '/upload-service/api/v1',
+};

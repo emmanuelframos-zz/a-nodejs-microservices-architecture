@@ -1,5 +1,5 @@
-describe('Upload Microservice - Unit Test - Upload Controller', async ()=>{
-    it('Upload Multipart Files', async ()=>{
+describe('Upload Microservice - Unit Test - Upload Controller', async () => {
+  it('Upload Multipart Files', async () => {
 
-    });
+  });
 });

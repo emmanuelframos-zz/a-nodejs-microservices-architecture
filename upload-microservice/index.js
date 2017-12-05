@@ -5,12 +5,12 @@ const setupApp = require('./src/app');
 const config = require('./config/environment');
 
 setupApp()
-    .then((app) => {
-        app.listen(config.port, () => {
-            logger.info(`Upload Microservice running on port ${config.port}`)
-        });
-    })
-    .catch((error) => {
-        logger.error(error);
-        process.exit(1);
+  .then((app) => {
+    app.listen(config.port, () => {
+      logger.info(`Upload Microservice running on port ${config.port}`);
     });
+  })
+  .catch((error) => {
+    logger.error(error);
+    process.exit(1);
+  });
