@@ -11,7 +11,7 @@ const validateUpload = (req) => {
   }
 
   for (let index = 0; index < req.files.length; index++) {
-    const file = req.files.files[index];
+    const file = req.files[index];
 
     if (!file.originalname) {
       throw new HttpError(HttpStatus.BAD_REQUEST, 'File name is mandatory.');
@@ -33,7 +33,7 @@ const validateUploadB64 = (req) => {
   }
 
   for (let index = 0; index < req.body.files.length; index++) {
-    const file = req.body.files.files[index];
+    const file = req.body.files[index];
 
     if (!file.name) {
       throw new HttpError(HttpStatus.BAD_REQUEST, 'File name is mandatory.');
