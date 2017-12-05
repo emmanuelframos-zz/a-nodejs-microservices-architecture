@@ -45,7 +45,7 @@ describe('Validators: Upload Validator', ()=>{
         let request = {};
 
         beforeEach(()=>{
-            request.body = {files: [{name:"default name", data: "data:image/jpeg;base64:/ykgioguJNFefey7gvm", expiry: "default date"}]};
+            request.body = {files: [{name: "default name", mimeType: "default mime", data: "/ykgioguJNFefey7gvm", expiry: "default date"}]};
         });
 
         it('should validate without throw an error', ()=>{
@@ -63,6 +63,11 @@ describe('Validators: Upload Validator', ()=>{
 
         it('should throw an error missing file name', ()=>{
             delete request.body.files[0].name;
+            expect(()=>{uploadValidator.validateUploadB64(request)}).to.throw(HttpError);
+        });
+
+        it('should throw an error missing file mime type', ()=>{
+            delete request.body.files[0].mimeType;
             expect(()=>{uploadValidator.validateUploadB64(request)}).to.throw(HttpError);
         });
 

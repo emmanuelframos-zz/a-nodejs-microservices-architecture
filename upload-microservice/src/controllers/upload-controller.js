@@ -1,4 +1,4 @@
-const Base64Utils = require('../utils/b64-utils');
+const Base64Utils = require('../utils/base64-utils');
 const FileStatus = require('../utils/file-status');
 
 const uploadBuilder = require('../builders/upload-builder');
@@ -56,7 +56,7 @@ const uploadB64 = async (req, res) => {
   for (let index = 0; index < req.body.files.length; index++) {
     const file = req.body.files[index];
 
-    const fileBuffer = Base64Utils.base64ToBinary(file.data.split('base64,/')[1]);
+    const fileBuffer = Base64Utils.base64ToBinary(file.data);
 
     const metadataB64Wrapper = metadataBuilder.buildMetadataForUploadB64(file, fileBuffer.size, req.body.expiry);
 
