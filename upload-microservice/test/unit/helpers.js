@@ -1,5 +1,5 @@
 const chai = require('chai');
-const td = require('testdouble');
+const sinon = require('sinon');
 
+global.sinon = sinon;
 global.expect = chai.expect;
-global.td = td;

@@ -15,7 +15,7 @@ const executeUpload = async (metadataWrapper, uploadWrapper) => {
   uploadWrapper.uniqueId = createMetadataResult.uniqueId;
 
   try {
-    await uploadService.upload(uploadWrapper);
+    await uploadService.upload(uploadWrapper.uniqueId, uploadWrapper.data);
 
     metadataWrapper.status = FileStatus.SUCCESS;
   } catch (err) {
